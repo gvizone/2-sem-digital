@@ -7,7 +7,7 @@
     <title>Cadastro de Cliente</title>
 </head>
 <body>
-    <form>
+    <form method="POST" action="cadastrar">
         <div>
             <label for="id-nome">Nome:</label>
             <input type="text" id="id-nome" name="nome" />

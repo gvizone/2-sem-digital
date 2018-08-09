@@ -6,22 +6,22 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import br.com.fiap.spring.model.Cliente;
+import br.com.fiap.spring.model.Carro;
 
 @Controller
-@RequestMapping("cliente")
-public class ClienteController {
+@RequestMapping("carro")
+public class CarroController {
 
 	@GetMapping("cadastrar")
 	public String abrirCadastro() {
-		return "cliente/form";
+		return "carro/form";
 	}
-
+	
 	@PostMapping("cadastrar")
-	public ModelAndView processarCadastro(Cliente cliente){
-		ModelAndView retorno = new ModelAndView("cliente/sucesso");
-		retorno.addObject("cli", cliente);
-		retorno.addObject("msg", "Cliente Cadastrado!");
+	public ModelAndView cadastrar(Carro carro) {
+		ModelAndView retorno = new ModelAndView("carro/sucesso");
+		retorno.addObject("carro", carro);
+		retorno.addObject("msg", "Cadastrado concluido!");
 		return retorno;
 	}
 }
