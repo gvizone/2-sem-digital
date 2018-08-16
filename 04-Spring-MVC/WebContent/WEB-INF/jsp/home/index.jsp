@@ -3,5 +3,10 @@
 <%@ taglib prefix="tags" tagdir="/WEB-INF/tags" %>
 
 <tags:template titulo="Página Inicial">
-	<h1>Página Inicial</h1>
+	<jsp:attribute name="scripts">
+		<p></p>
+	</jsp:attribute>
+	<jsp:body>
+		<h1>Página Inicial</h1>
+	</jsp:body>
 </tags:template>
